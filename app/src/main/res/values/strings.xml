@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mortgage Monthly Payment Calculator</string>
+    <string name="home_value">Home Value</string>
+    <string name="total_paid">Total Paid:</string>
+    <string name="apr">APR</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="tax_rate">Tax Rate</string>
+    <string name="terms">Terms</string>
+    <string name="total_interest_paid">Total Interest Paid:</string>
+    <string name="monthly_payment">Monthly Payment</string>
+    <string name="pay_off_date">Pay off date</string>
+</resources>

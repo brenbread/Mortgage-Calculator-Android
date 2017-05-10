@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/homeVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Home Value"
+        android:inputType="numberDecimal"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/downPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/down_payment"
+        android:inputType="numberDecimal"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/taxAPR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/apr"
+        android:inputType="numberDecimal"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/taxTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/terms"
+        android:inputType="number"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/taxRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tax_rate"
+        android:inputType="numberDecimal"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Calculate"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="REset"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/Paid"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:text="@string/total_paid" />
+
+    <TextView
+        android:id="@+id/totalPaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_interest_paid" />
+
+    <TextView
+        android:id="@+id/totalInterest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/monthly_payment" />
+
+    <TextView
+        android:id="@+id/monthPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_off_date" />
+
+    <TextView
+        android:id="@+id/payoffDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
