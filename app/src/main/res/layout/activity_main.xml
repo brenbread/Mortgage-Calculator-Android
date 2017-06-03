@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <EditText
         android:id="@+id/homeVal"
@@ -31,13 +32,16 @@
         android:inputType="numberDecimal"
         tools:ignore="TextFields" />
 
-    <EditText
-        android:id="@+id/taxTerms"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/terms"
-        android:inputType="number"
-        tools:ignore="TextFields" />
+        android:text="@string/tax_terms_years" />
+
+    <Spinner
+        android:id="@+id/taxTerms"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:background="@android:drawable/btn_dropdown" />
 
     <EditText
         android:id="@+id/taxRate"
@@ -49,19 +53,21 @@
 
     <Button
         android:id="@+id/calcButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="289dp"
+        android:layout_height="30dp"
         android:layout_gravity="right"
         android:text="Calculate"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+        tools:ignore="HardcodedText,RtlHardcoded"
+        android:layout_weight="0.21" />
 
     <Button
         android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="288dp"
+        android:layout_height="33dp"
         android:layout_gravity="right"
         android:text="REset"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+        tools:ignore="HardcodedText,RtlHardcoded"
+        android:layout_weight="0.04" />
 
     <TextView
         android:id="@+id/Paid"
