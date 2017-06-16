@@ -63,7 +63,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.calcButton:
-                String homeValueIn = homeValue.getText().toString();
+                String homeValueSTR = homeValue.getText().toString();
+                String downPaymentSTR = downPayment.getText().toString();
+                String taxAPRSTR = taxAPR.getText().toString();
+                String taxRateSTR = taxRate.getText().toString();
+                String taxTermsSTR = taxTerms.getSelectedItem().toString();
+
+                double homeValueIn = Double.parseDouble(homeValueSTR);
+                double downPaymentIn = Double.parseDouble(downPaymentSTR);
+                double taxAPRin = Double.parseDouble(taxAPRSTR);
+                double taxRateIn = Double.parseDouble(taxRateSTR);
+                double taxTermsIn = Double.parseDouble(taxTermsSTR);
+
+                double taxRatePowA = 1+taxRateIn;
+                double monthlyPaymentPow = Math.pow(taxRatePowA, taxTermsIn*12);
+                double monthlyPayment = (homeValueIn)*((taxRateIn*monthlyPaymentPow)/(monthlyPaymentPow-1));
+                double totalPaidCalc = (monthlyPayment*taxTermsIn)+downPaymentIn;
+                double totalInterestCalc = ((taxAPRin*Math.pow(1+taxAPRin, taxTermsIn*12))/(Math.pow(1+taxAPRin, taxTermsIn)-1))*taxRateIn;
+
+                String monthlyPaymentOut = monthlyPayment+"";
+                String totalPaidOut = totalPaidCalc+"";
+                String totalInterestOut = totalInterestCalc+"";
+
+                totalPaid.setText(totalPaidOut);
+                totalInterest.setText(totalInterestOut);
+                monthPayment.setText(monthlyPaymentOut);
+                payoffDate.setText(taxTermsSTR);
+
                 break;
 
             case R.id.resetButton:
@@ -76,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 downPayment.setText("");
                 taxAPR.setText("");
                 taxRate.setText("");
-                //taxTerms.setAdapter(adapter);
+
 
 
                 break;
